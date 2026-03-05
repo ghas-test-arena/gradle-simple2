@@ -1,7 +1,9 @@
 plugins {
   id 'java'
+  id 'io,spring.dependency-management' version '1.1.16'
   id 'org.springframework.boot' version '3.3.10'
   id 'maven-publish'
+  id 'jacoco'
 }
 
 
@@ -29,5 +31,22 @@ dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive' 
   implementation 'com.github.luben:zstd-jni:1.5.5-6'
   implementation 'org.eclipse.jetty:jetty-reactive-httpclient'
+
+  developmentOnly 'org.springframework.boot:spring-boot-devtools'
+  
+  testImplementation "org-mockito:mockito-core:3.+" 
+  testImplementation 'io.cucumber: cucumber-java:7.13.0' 
+  testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.13.0'
+  testImplementation 'io.cucumber:cucumber-spring:7.13.0'
+  testImplementation 'org.junit.platform:junit-platform-suite'
+
+  testImplementation "io.projectreactor:reactor-test'
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+  testImplementation 'org.springframework.security:spring-security-test'
+  testImplementation "com.squareup.okhttp3:mockwebserver:4.12.0"
+  testImplementation 'io.micrometer:micrometer-observation-test'
+  testImplementation 'net.javacrumbs.json-unit:json-unit-assertj:3.2.2'
+  testImplementation 'io.micrometer:micrometer-tracing-test'
+  testImplementation 'io.micrometer:micrometer-observation-test'
 }
 
