@@ -22,5 +22,9 @@ dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-aop' 
   implementation "org.springframework.cloud:spring-cloud-starter" 
   implementation "org.springframework.cloud:spring-cloud-starter-vault-config"
+
+  implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive' 
+  implementation 'com.github.luben:zstd-jni:1.5.5-6'
+  implementation 'org.eclipse.jetty:jetty-reactive-httpclient'
 }
 
